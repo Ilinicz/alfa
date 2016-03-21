@@ -1,11 +1,32 @@
 ---
-title: Page Title
+title: Заказ путевки в кредит || Детский лагерь "Материк"
 ---
 
-.delete-me
-  .container
-    %h1 thoughtbot Middleman Starter
-    %p
-      You're all set!
-      <a href="http://github.com/thoughtbot/proteus-middleman">Let's get started</a>
-      building your prototype.
+.banner
+  %h1 Заказ
+  %h6 Оформи путевку в кредит вместе с Альфабанк!
+
+.container
+  .row
+    .six.columns
+      %h5 Выберите путевку:
+      %ol
+        %li База
+        %li Оптима
+        %li Прогресс
+    .six.columns
+      %h5 Заполните форму:
+      %form(action="https://anketa.alfabank.ru/alfaform-pos/endpoint" method="post"
+            enctype="application/x-www-form-urlencoded")
+        .row
+          .twelve.columns
+            //%label.label-body(for='firstname')
+            %input.u-full-width(type='text' placeholder='Как к Вам обращаться?')
+            //%label(for='phone') Телефон
+            %input.u-full-width(type='text' placeholder='Телефон для связи')
+            //%label(for='email') Электронная почта
+            %input.u-full-width(type='text' placeholder='Электронная почта')
+
+
+
+        %input.button-primary.u-full-width(type='submit' value='Вперед!')

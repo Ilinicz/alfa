@@ -1,19 +1,30 @@
-body {
-  background-color: $light-gray;
-  color: $medium-gray;
+h1 {
+  font-weight: 900;
 }
 
-.delete-me {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
+.banner {
+  //height: 30vh;
+  padding: 3em 4em;
+  text-align: center;
+  color: #fff;
+  background-color: #159957;
+  background-image: linear-gradient(120deg, #155799, #159957);
+  @media (min-width: 400px) { margin-bottom: 2em; padding: 2em 3em;}
+  @media (min-width: 550px) { margin-bottom: 2.5em; padding: 2.5em 3.5em;}
+  @media (min-width: 750px) { margin-bottom: 3em; padding: 3em 4em;}
+  @media (min-width: 1000px){ margin-bottom: 3.5em; padding: 3.5em 4.5em;}
+  @media (min-width: 1200px){ margin-bottom: 4em; padding: 5em 4em;}
 
-  .container {
-    text-align: center;
+  h6 {
+    font-weight: normal;
+    opacity: 0.7;
+    margin-bottom: 2em;
+    font-size: 1.24em;
+    @media (min-width: 400px)  { font-size: 1em;}
+    @media (min-width: 550px)  { font-size: 1em;}
+    @media (min-width: 750px)  { font-size: 1.2em}
+    @media (min-width: 1000px) { font-size: 1.24em;}
+    @media (min-width: 1200px) { font-size: 1.25em;}
 
-    h1 {
-      font-weight: 200;
-    }
   }
 }
