@@ -7,26 +7,45 @@ title: Заказ путевки в кредит || Детский лагерь 
   %h6 Оформи путевку в кредит вместе с Альфабанк!
 
 .container
-  .row
-    .six.columns
-      %h5 Выберите путевку:
-      %ol
-        %li База
-        %li Оптима
-        %li Прогресс
-    .six.columns
-      %h5 Заполните форму:
-      %form(action="https://anketa.alfabank.ru/alfaform-pos/endpoint" method="post"
+  %form(action="https://anketa.alfabank.ru/alfaform-pos/endpoint" method="post"
             enctype="application/x-www-form-urlencoded")
-        .row
-          .twelve.columns
-            //%label.label-body(for='firstname')
-            %input.u-full-width(type='text' placeholder='Как к Вам обращаться?')
-            //%label(for='phone') Телефон
-            %input.u-full-width(type='text' placeholder='Телефон для связи')
-            //%label(for='email') Электронная почта
-            %input.u-full-width(type='text' placeholder='Электронная почта')
+    .row
+      .six.columns
+        //%h5 Выберите путевку:
+        .variant-selector
+          %input#base(type='radio' name='variant' value='base')
+          %label.varcard.base(for='base')
+            .price.u-pull-right 29900руб
+            %span.name
+              БАЗА
+              .small 8-10 лет
+            .desc Плавание - Спортивная рыбалка - Стрельба из лука - Велотриал - Экоплощадка
+
+          %input#optima(type='radio' name='variant' value='optima' checked='checked')
+          %label.varcard.optima(for='optima')
+            .price.u-pull-right 34900руб
+            %span.name
+              ОПТИМА
+              .small 8-16 лет
+            .desc Водные развлечения - Рафтинг - Велотриал - Тай-парк - Школа выживания
+
+          %input#progress(type='radio' name='variant' value='progress')
+          %label.varcard.progress(for='progress')
+            .price.u-pull-right 39900руб
+            %span.name
+              ПРОГРЕСС
+              .small 10-16 лет
+            .desc Водные лыжи - Байдарки - Квадроциклы - Тай-парк - Школа выживания+поход одного дня
+
+      .six.columns
+        %h5 Заполните форму:
+        //%label.label-body(for='firstname')
+        %input.u-full-width(type='text' placeholder='Как к Вам обращаться?')
+        //%label(for='phone') Телефон
+        %input.u-full-width(type='text' placeholder='Телефон для связи')
+        //%label(for='email') Электронная почта
+        %input.u-full-width(type='text' placeholder='Электронная почта')
 
 
-
-        %input.button-primary.u-full-width(type='submit' value='Вперед!')
+        %br
+        %input.button-primary.u-full-width(type='submit' value='Поехали!')
