@@ -92,10 +92,10 @@ input {
   &[type="reset"].button-primary,
   &[type="button"].button-primary {
     color: #fff;
-    //background-color: $primary-color;
-    //border-color: $primary-color;
-    border-color: rgba(241, 116, 36, 1);
-    background-color: rgba(241, 116, 36, 1);
+    background-color: $primary-color;
+    border-color: $primary-color;
+    //border-color: rgba(241, 116, 36, 1);
+    //background-color: rgba(241, 116, 36, 1);
   }
 }
 
@@ -111,10 +111,18 @@ input {
   &[type="reset"].button-primary:hover,
   &[type="button"].button-primary:hover {
     color: #fff;
-    background-color: darken(rgba(241, 116, 36, 1), 15%);;
-    border-color: darken(rgba(241, 116, 36, 1), 15%);
+    background-color: $link-color;
+    border-color: $link-color;
+    //background-color: darken(rgba(241, 116, 36, 1), 15%);;
+    //border-color: darken(rgba(241, 116, 36, 1), 15%);
   }
 }
+
+button.button-primary:disabled{
+  color: #fff;
+  background-color: lighten($primary-color, 10%);
+  border-color: lighten($primary-color, 10%);
+  cursor: not-allowed;}
 
 .button.button-primary:focus,
 button.button-primary:focus {
@@ -128,8 +136,10 @@ input {
   &[type="reset"].button-primary:focus,
   &[type="button"].button-primary:focus {
     color: #fff;
-    background-color: darken(rgba(241, 116, 36, 1), 15%);;
-    border-color: darken(rgba(241, 116, 36, 1), 15%);
+    background-color: $link-color;
+    border-color: $link-color;
+    //background-color: darken(rgba(241, 116, 36, 1), 15%);;
+    //border-color: darken(rgba(241, 116, 36, 1), 15%);
   }
   &[type="email"],
   &[type="number"],

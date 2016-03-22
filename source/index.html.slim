@@ -1,0 +1,58 @@
+---
+title: Заказ путевки в кредит || Детский лагерь "Материк"
+---
+
+.banner
+  h4 Кредитный калькулятор
+
+.container
+  .row
+    .six.columns
+      .variant-selector
+        input#base(type='radio' name='variant' value='base')
+        label.varcard.base(for='base')
+          .price.u-pull-right 29900руб
+          span.name
+            | БАЗА 
+            .small 8-10 лет
+          .desc Плавание - Спортивная рыбалка - Стрельба из лука - Велотриал - Экоплощадка
+
+        input#optima(type='radio' name='variant' value='optima' checked='checked')
+        label.varcard.optima(for='optima')
+          .price.u-pull-right 34900руб
+          span.name
+            | ОПТИМА 
+            .small 8-16 лет
+          .desc Водные развлечения - Рафтинг - Велотриал - Тай-парк - Школа выживания
+
+        input#progress(type='radio' name='variant' value='progress')
+        label.varcard.progress(for='progress')
+          .price.u-pull-right 39900руб
+          span.name
+            | ПРОГРЕСС 
+            .small 10-16 лет
+          .desc Водные лыжи - Байдарки - Квадроциклы - Тай-парк - Школа выживания+поход одного дня
+
+    .six.columns.form
+      label.label-body(for='firstname') Имя
+      input#firstname.u-full-width(type='text' placeholder='Григорий' autofocus)
+      label(for='phone') Телефон
+      input#mobphone.u-full-width(type='text' placeholder='Без семерки, например: 9261234567')
+      label(for='email') Электронная почта
+      input#email.u-full-width(type='text' placeholder='grisha@example.ru')
+
+
+      form#alfaXMLForm(
+        action="https://anketa.alfabank.ru/alfaform-pos/endpoint" 
+        enctype="application/x-www-form-urlencoded" method="post" target='_blank')
+        
+        textarea#alfaXMLField(name="InXML" hidden)
+        
+        br
+      button.button-primary.u-full-width#calculate(type="button" disabled='disabled') Рассчитать
+        
+      //form#client_info(
+      //  action="https://formspree.io/vilinicz@mail.ru"
+      //  method='post')
+      //  input(name='_replyto' hidden)
+      //  textarea(name='info' hidden)
