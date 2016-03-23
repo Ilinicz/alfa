@@ -45,7 +45,7 @@ $ ->
       description = 'Путевка в лагерь Материк по программе Прогресс'
 
     $.ajax
-      url: "https://formspree.io/vilinicz@mail.ru"
+      url: "https://formspree.io/alfa@namaterik.ru"
       method: "POST"
       data:
         message: 'Новая заявка на кредит!'
